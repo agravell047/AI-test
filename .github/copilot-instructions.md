@@ -2,7 +2,7 @@
 
 This project is a web application that allows users to create and manage tasks. The application is built using React and Node.js, and it uses MongoDB as the database.
 
-## Coding Standards
+## Java Coding Standards
 
 - Use camelCase for variable, method, and parameter names.
 - Use PascalCase for class and interface names.

@@ -41,6 +41,13 @@ This project includes a sample controller for demonstration purposes:
 
 All endpoints are documented with Swagger/OpenAPI annotations.
 
+### TestController
+
+- **GET /api/test**: Returns a test string.
+- **GET /api/test/another**: Returns another test string.
+- **GET /api/test/timestamp**: Returns a test message with the current timestamp.
+- **POST /api/test**: Accepts a string in the request body and returns a confirmation message with the input.
+
 ## Testing
 
 Related tests for the GenericController endpoints are provided in `GenericControllerTest.java`.
