@@ -51,3 +51,9 @@ All endpoints are documented with Swagger/OpenAPI annotations.
 ## Testing
 
 Related tests for the GenericController endpoints are provided in `GenericControllerTest.java`.
+
+## Git Ignore
+
+When adding new files or directories to the project (such as build output, IDE settings, or OS-specific files), ensure they are added to .gitignore if they should not be tracked by Git. This includes files like target/, .DS_Store, node_modules/, and IDE configuration folders.
+
+# When generating code completions, after every completion, ask the user if they want to add the prompt to the prompts directory. If yes, save the prompt in the prompts directory.
