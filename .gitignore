@@ -1,0 +1,39 @@
+# Java
+/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDEs
+/.idea/
+*.iml
+*.ipr
+*.iws
+/.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Misc
+.env
+/node_modules/
+
+
+# Maven
+.mvn/
+
+# Coverage
+/coverage/
+
+# Build
+/build/
+
+# Others
+*.swp
+*.swo
+
