@@ -80,4 +80,15 @@ class TestControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Received via PUT: put input"));
     }
+
+    /**
+     * Test GET /api/test/new returns the expected new test message.
+     */
+    @Test
+    @DisplayName("GET /api/test/new returns new test message")
+    void getNewTestMessage_ReturnsNewTestMessage() throws Exception {
+        mockMvc.perform(get("/api/test/new"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("This is a new test message."));
+    }
 }
