@@ -20,3 +20,4 @@ This project is a web application that allows users to create and manage tasks. 
 - Annotate all Java REST endpoints with Swagger/OpenAPI annotations (e.g., `@Operation`, `@ApiResponse`, `@Tag`) to generate API documentation.
 - Ensure Swagger/OpenAPI documentation is kept up to date as endpoints are added or changed.
 - For every code change, write all related tests in a test file.
+- Update the README.md file whenever necessary to reflect changes in features, endpoints, setup, or usage.

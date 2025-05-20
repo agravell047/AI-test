@@ -28,3 +28,19 @@ If you have ideas for new experiments, want to share results, or improve the set
 ## License
 
 This repository is for testing and educational purposes only.
+
+## REST API Endpoints
+
+This project includes a sample controller for demonstration purposes:
+
+### GenericController
+
+- **GET /testing123**: Returns a confirmation message.
+- **POST /testing123**: Accepts a string in the request body and returns a confirmation message with the input.
+- **PUT /testing123**: Accepts a string in the request body and returns a confirmation message with the input.
+
+All endpoints are documented with Swagger/OpenAPI annotations.
+
+## Testing
+
+Related tests for the GenericController endpoints are provided in `GenericControllerTest.java`.
