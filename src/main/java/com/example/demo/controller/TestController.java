@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -76,5 +77,20 @@ public class TestController {
     @PostMapping
     public String postTestString(@RequestBody final String input) {
         return "Received via POST: " + input;
+    }
+
+    /**
+     * Accepts a string via PUT and returns a confirmation message.
+     *
+     * @param input the input string from the request body
+     * @return a confirmation message with the input
+     */
+    @Operation(summary = "Put test string", description = "Accepts a string and returns a confirmation message via PUT.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Successful receipt of test string via PUT")
+            })
+    @PutMapping
+    public String putTestString(@RequestBody final String input) {
+        return "Received via PUT: " + input;
     }
 }

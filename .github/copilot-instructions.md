@@ -21,3 +21,4 @@ This project is a web application that allows users to create and manage tasks. 
 - Ensure Swagger/OpenAPI documentation is kept up to date as endpoints are added or changed.
 - For every code change, write all related tests in a test file.
 - Update the README.md file whenever necessary to reflect changes in features, endpoints, setup, or usage.
+- When updating endpoints, create or update the corresponding Postman request inside the /postman folder.

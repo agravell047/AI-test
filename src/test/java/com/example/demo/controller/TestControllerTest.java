@@ -1,10 +1,15 @@
+package com.example.demo.controller;
+
+import com.example.demo.controller.TestController;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -61,5 +66,18 @@ class TestControllerTest {
                 .content("test input"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Received via POST: test input"));
+    }
+
+    /**
+     * Test PUT /api/test returns the expected confirmation message.
+     */
+    @Test
+    @DisplayName("PUT /api/test returns confirmation message with input")
+    void putTestString_ReturnsConfirmationMessage() throws Exception {
+        mockMvc.perform(put("/api/test")
+                .contentType(org.springframework.http.MediaType.TEXT_PLAIN)
+                .content("put input"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Received via PUT: put input"));
     }
 }
