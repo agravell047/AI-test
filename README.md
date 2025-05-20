@@ -47,6 +47,7 @@ All endpoints are documented with Swagger/OpenAPI annotations.
 - **GET /api/test/another**: Returns another test string.
 - **GET /api/test/timestamp**: Returns a test message with the current timestamp.
 - **POST /api/test**: Accepts a string in the request body and returns a confirmation message with the input.
+- **GET /api/test/new**: Returns a new test message.
 
 ## Testing
 

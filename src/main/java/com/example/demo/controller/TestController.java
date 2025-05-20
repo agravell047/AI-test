@@ -93,4 +93,18 @@ public class TestController {
     public String putTestString(@RequestBody final String input) {
         return "Received via PUT: " + input;
     }
+
+    /**
+     * Retrieves a new test message.
+     *
+     * @return a new test message
+     */
+    @Operation(summary = "Get new test message", description = "Returns a new test message.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "Successful retrieval of new test message")
+            })
+    @GetMapping("/new")
+    public String getNewTestMessage() {
+        return "This is a new test message.";
+    }
 }

@@ -97,6 +97,21 @@
                 }
             },
             "response": []
+        },
+        {
+            "name": "Get New Test Message",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/test/new",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["api", "test", "new"]
+                }
+            },
+            "response": []
         }
     ]
 }

@@ -15,6 +15,7 @@ classDiagram
         +getTestMessageWithTimestamp()
         +postTestString()
         +putTestString()
+        +getNewTestMessage()
     }
     class TestService {
         +getTestString()
