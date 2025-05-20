@@ -1,8 +1,10 @@
 package com.example.demo;
 
+import com.example.demo.service.GenericService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -15,6 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "GenericController", description = "Controller for generic endpoints.")
 @RestController
 public class GenericController {
+    private final GenericService genericService;
+
+    @Autowired
+    public GenericController(final GenericService genericService) {
+        this.genericService = genericService;
+    }
 
     /**
      * GET /testing123 endpoint.
@@ -23,7 +31,7 @@ public class GenericController {
      */
     @GetMapping("/testing123")
     public String testing123() {
-        return "Endpoint /testing123 is working!";
+        return genericService.getTesting123();
     }
 
     /**
@@ -36,7 +44,7 @@ public class GenericController {
     @ApiResponse(responseCode = "200", description = "Successfully received input.")
     @PostMapping("/testing123")
     public String postTesting123(@RequestBody String input) {
-        return "Received via POST: " + input;
+        return genericService.postTesting123(input);
     }
 
     /**
@@ -49,6 +57,6 @@ public class GenericController {
     @ApiResponse(responseCode = "200", description = "Successfully received input via PUT.")
     @PutMapping("/testing123")
     public String putTesting123(@RequestBody String input) {
-        return "Received via PUT: " + input;
+        return genericService.putTesting123(input);
     }
 }
