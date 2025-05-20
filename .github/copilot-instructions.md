@@ -22,3 +22,9 @@ This project is a web application that allows users to create and manage tasks. 
 - For every code change, write all related tests in a test file.
 - Update the README.md file whenever necessary to reflect changes in features, endpoints, setup, or usage.
 - When updating endpoints, create or update the corresponding Postman request inside the /postman folder.
+
+## Workflow and Automation Instructions
+
+- When asked to commit staged files, automatically generate a descriptive commit message summarizing the changes, and use it in the commit command.
+- When asked to push, always check the current branch and push to that branch.
+- When API endpoints are added or changed, update the Mermaid diagram in `docs/api-diagram.md` to reflect the current API structure.

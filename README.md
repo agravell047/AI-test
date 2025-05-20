@@ -29,32 +29,9 @@ If you have ideas for new experiments, want to share results, or improve the set
 
 This repository is for testing and educational purposes only.
 
-## REST API Endpoints
+## Service Layer
 
-This project includes a sample controller for demonstration purposes:
+This project now includes a service layer for business logic. The `TestService` class is used by `TestController` to provide the response for the `/api/test` endpoint. This separation improves maintainability and testability.
 
-### GenericController
-
-- **GET /testing123**: Returns a confirmation message.
-- **POST /testing123**: Accepts a string in the request body and returns a confirmation message with the input.
-- **PUT /testing123**: Accepts a string in the request body and returns a confirmation message with the input.
-
-All endpoints are documented with Swagger/OpenAPI annotations.
-
-### TestController
-
-- **GET /api/test**: Returns a test string.
-- **GET /api/test/another**: Returns another test string.
-- **GET /api/test/timestamp**: Returns a test message with the current timestamp.
-- **POST /api/test**: Accepts a string in the request body and returns a confirmation message with the input.
-
-## Testing
-
-Related tests for the GenericController endpoints are provided in `GenericControllerTest.java`.
-
-## Git Ignore
-
-When adding new files or directories to the project (such as build output, IDE settings, or OS-specific files), ensure they are added to .gitignore if they should not be tracked by Git. This includes files like target/, .DS_Store, node_modules/, and IDE configuration folders.
-
-# When asked to commit staged files, automatically generate a descriptive commit message summarizing the changes, and use it in the commit command.
-# When asked to push, always check the current branch and push to that branch.
+- `TestService#getTestString()` is called by `TestController#getTestString()`.
+- The API diagram in `docs/api-diagram.md` has been updated to reflect this relationship.
