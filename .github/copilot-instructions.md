@@ -41,3 +41,4 @@ This project is a web application that allows users to create and manage tasks. 
     - If the user mentions "docs" or documentation, use a branch name starting with `docs-` followed by a context-based description (e.g., `docs-update-readme`).
     - If the user mentions "test" or "tests", use a branch name starting with `test-` followed by a context-based description (e.g., `test-add-service-tests`).
     - Otherwise, generate a clear and descriptive branch name based on the context, using dashes to separate words.
+- Always update the `.gitignore` file with any new files, folders, or patterns that should not be tracked by git as they are added to this repository.
